@@ -1,0 +1,14 @@
+kind = "web"
+previewPath = "/"
+title = "NovaBank"
+
+[[services]]
+localPort = 5173
+name = "web"
+paths = ["/"]
+
+[services.env]
+PORT = "5173"
+
+[services.development]
+run = "pnpm --filter @workspace/client-admin run dev"

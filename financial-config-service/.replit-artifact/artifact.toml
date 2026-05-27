@@ -1,0 +1,15 @@
+kind = "api"
+previewPath = "/api/account-types"
+title = "FinancialConfig Service"
+
+[[services]]
+localPort = 4000
+name = "FinancialConfig Service"
+paths = ["/api/account-types", "/api/currencies", "/api/exchange"]
+
+[services.env]
+PORT = "4000"
+NODE_ENV = "development"
+
+[services.development]
+run = "pnpm --filter financialconfig-service run dev"
